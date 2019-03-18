@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
-import NavBar from './components/NavBar'
+import Game from './pages/Game'
 
 class App extends Component {
   render() {
     return (
-      <NavBar />
+      <Game />
     );
   }
 }

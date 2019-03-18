@@ -1,21 +1,13 @@
-import React, { Component } from "react";
-import "./style.css";
+import React from "react";
 
-class NavBar extends Component {
-  // Setting the component's initial state
-  state = {
-    score: 0,
-  };
-
-  render() {
-    // Notice how each input has a `value`, `name`, and `onChange` prop
-    return (
-      <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">Clicky Game</a>
-      </nav>
-      
-    );
-  }
+export function NavBar(props) {
+  return (
+    <nav className="navbar navbar-dark bg-dark d-flex justify-content-around">
+      <a className="navbar-brand" href="/">Clicky Game</a>
+      <span className="navbar-text">{props.message}</span>
+      <span className="navbar-text">Score: {props.score} | Top Score: {props.topScore}</span>
+    </nav>
+  )
 }
 
 export default NavBar;
