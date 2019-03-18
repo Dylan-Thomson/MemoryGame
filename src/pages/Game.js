@@ -17,6 +17,8 @@ class Game extends Component {
       "./assets/images/aurora.jpg",
       "./assets/images/fold.jpg",
       "./assets/images/pounce.jpg",
+      "./assets/images/fluff.jpg",
+      "./assets/images/black.jpg",
     ]
   }
 
