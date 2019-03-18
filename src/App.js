@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import Game from './pages/Game'
 import { BrowserRouter } from 'react-router-dom';
 
