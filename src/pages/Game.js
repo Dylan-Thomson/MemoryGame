@@ -12,25 +12,30 @@ class Game extends Component {
       "/assets/images/bowtie.jpeg",
       "/assets/images/bwon.jpg",
       "/assets/images/towelkitten.jpg",
+      "/assets/images/leo.jpg",
+      "/assets/images/white.jpg",
+      "/assets/images/aurora.jpg",
+      "/assets/images/fold.jpg",
+      "/assets/images/pounce.jpg",
     ]
   }
 
   updateScore = (key) => {
     if(this.state.clicked.includes(key)) {
-      console.log("wrong");
       this.setState({
         score: 0,
         clicked: [],
-        message: "Wrong!"
+        message: "Your Guess Was Wrong!",
+        images: this.state.images.sort(() => 0.5 - Math.random())
       });
     }
     else {
-      console.log("right");
       this.setState({
         score: this.state.score + 1,
         clicked: [...this.state.clicked, key],
-        message: "Correct!",
-        topScore: this.state.score + 1 > this.state.topScore ? this.state.score + 1 : this.state.topScore
+        message: "Your Guess Was Correct!",
+        topScore: this.state.score + 1 > this.state.topScore ? this.state.score + 1 : this.state.topScore,
+        images: this.state.images.sort(() => 0.5 - Math.random())
       });
     }
     console.log(this.state);
@@ -44,12 +49,12 @@ class Game extends Component {
           score={this.state.score}
           topScore={this.state.topScore}
         />
-        <div className="d-flex flex-row flex-wrap w-100">
+        <div className="container d-flex flex-row flex-wrap mx-auto justify-content-center my-5">
           {this.state.images.map((url, i) => (
             <GameCard 
               key={i} 
               url={url} 
-              onClick={() => this.updateScore(i)} 
+              onClick={() => this.updateScore(url)} 
             />
           ))}
         </div>
