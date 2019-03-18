@@ -1,0 +1,2 @@
+.game-card{width:200px;height:200px;background-size:cover;cursor:pointer;transition:box-shadow .25s,-webkit-transform .25s;transition:transform .25s,box-shadow .25s;transition:transform .25s,box-shadow .25s,-webkit-transform .25s}.game-card:hover{-webkit-transform:scale(1.1);transform:scale(1.1);z-index:2;box-shadow:3px 14px 33px 0 rgba(0,0,0,.5)}
+/*# sourceMappingURL=main.8b52d21a.chunk.css.map */
