@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
 import Game from './pages/Game'
+import { BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <Game />
+      <React.Fragment>
+        <Game />
+        <BrowserRouter basename="/" />
+      </React.Fragment>
     );
   }
 }
