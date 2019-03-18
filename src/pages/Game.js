@@ -9,14 +9,14 @@ class Game extends Component {
     topScore: 0,
     clicked: [],
     images: [
-      "/assets/images/bowtie.jpeg",
-      "/assets/images/bwon.jpg",
-      "/assets/images/towelkitten.jpg",
-      "/assets/images/leo.jpg",
-      "/assets/images/white.jpg",
-      "/assets/images/aurora.jpg",
-      "/assets/images/fold.jpg",
-      "/assets/images/pounce.jpg",
+      "/images/bowtie.jpeg",
+      "/images/bwon.jpg",
+      "/images/towelkitten.jpg",
+      "/images/leo.jpg",
+      "/images/white.jpg",
+      "/images/aurora.jpg",
+      "/images/fold.jpg",
+      "/images/pounce.jpg",
     ]
   }
 
