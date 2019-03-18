@@ -1,13 +1,6 @@
-.correct {
-  color: green !important;
-  transition: .2s;
+.text-danger, .text-success {
+  transition: color 0.25s !important;
 }
-
-.wrong {
-  color: red !important;
-  transition: .2s;
-}
-
 .shake {
   animation: shake 0.5s;
 }
