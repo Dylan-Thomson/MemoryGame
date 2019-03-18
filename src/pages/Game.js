@@ -30,10 +30,10 @@ class Game extends Component {
         message: "Your Guess Was Wrong!",
         images: this.state.images.sort(() => 0.5 - Math.random())
       });
-      document.getElementById("message").classList.add("wrong");
+      document.getElementById("message").classList.add("text-danger");
       [...document.getElementsByClassName("game-card")].map((element) => element.classList.add("shake"));
       setTimeout(() => {
-        document.getElementById("message").classList.remove("wrong");
+        document.getElementById("message").classList.remove("text-danger");
         [...document.getElementsByClassName("game-card")].map((element) => element.classList.remove("shake"));
       }, 500);
     }
@@ -46,10 +46,10 @@ class Game extends Component {
         images: this.state.images.sort(() => 0.5 - Math.random())
       });
       console.log(document.getElementById("message"));
-      document.getElementById("message").classList.add("correct");
+      document.getElementById("message").classList.add("text-success");
       setTimeout(() => {
-        document.getElementById("message").classList.remove("correct");
-      }, 300);
+        document.getElementById("message").classList.remove("text-success");
+      }, 500);
     }
     console.log(this.state);
   }
