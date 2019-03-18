@@ -30,6 +30,12 @@ class Game extends Component {
         message: "Your Guess Was Wrong!",
         images: this.state.images.sort(() => 0.5 - Math.random())
       });
+      document.getElementById("message").classList.add("wrong");
+      [...document.getElementsByClassName("game-card")].map((element) => element.classList.add("shake"));
+      setTimeout(() => {
+        document.getElementById("message").classList.remove("wrong");
+        [...document.getElementsByClassName("game-card")].map((element) => element.classList.remove("shake"));
+      }, 500);
     }
     else {
       this.setState({
@@ -39,6 +45,11 @@ class Game extends Component {
         topScore: this.state.score + 1 > this.state.topScore ? this.state.score + 1 : this.state.topScore,
         images: this.state.images.sort(() => 0.5 - Math.random())
       });
+      console.log(document.getElementById("message"));
+      document.getElementById("message").classList.add("correct");
+      setTimeout(() => {
+        document.getElementById("message").classList.remove("correct");
+      }, 300);
     }
     console.log(this.state);
   }
