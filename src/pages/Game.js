@@ -45,13 +45,11 @@ class Game extends Component {
         topScore: this.state.score + 1 > this.state.topScore ? this.state.score + 1 : this.state.topScore,
         images: this.state.images.sort(() => 0.5 - Math.random())
       });
-      console.log(document.getElementById("message"));
       document.getElementById("message").classList.add("text-success");
       setTimeout(() => {
         document.getElementById("message").classList.remove("text-success");
       }, 500);
     }
-    console.log(this.state);
   }
 
   render() {
